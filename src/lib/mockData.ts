@@ -78,8 +78,8 @@ export const initialPrepTasks: PrepTask[] = [
 ];
 
 export const studentProfile = {
-  name: "Arjun Sharma",
-  email: "arjun.sharma@college.edu",
+  name: "Bhawna Vig",
+  email: "bhawna.vig@college.edu",
   branch: "Computer Science & Engineering",
   year: "Final Year",
   cgpa: "8.4",
