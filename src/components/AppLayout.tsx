@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { announcements } from "@/lib/mockData";
 
 const navItems = [
-  { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+  { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
   { to: "/opportunities", icon: Building2, label: "Opportunities" },
   { to: "/preparation", icon: BookOpen, label: "Preparation" },
   { to: "/profile", icon: User, label: "Profile" },

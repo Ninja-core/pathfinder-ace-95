@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppProvider } from "@/lib/AppContext";
 import AppLayout from "@/components/AppLayout";
 import Chatbot from "@/components/Chatbot";
+import Landing from "@/pages/Landing";
 import Dashboard from "@/pages/Dashboard";
 import Opportunities from "@/pages/Opportunities";
 import Preparation from "@/pages/Preparation";
@@ -15,6 +16,13 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const WithLayout = ({ children }: { children: React.ReactNode }) => (
+  <>
+    <AppLayout>{children}</AppLayout>
+    <Chatbot />
+  </>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -22,17 +30,15 @@ const App = () => (
       <Sonner />
       <AppProvider>
         <BrowserRouter>
-          <AppLayout>
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/opportunities" element={<Opportunities />} />
-              <Route path="/preparation" element={<Preparation />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/admin" element={<Admin />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </AppLayout>
-          <Chatbot />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/dashboard" element={<WithLayout><Dashboard /></WithLayout>} />
+            <Route path="/opportunities" element={<WithLayout><Opportunities /></WithLayout>} />
+            <Route path="/preparation" element={<WithLayout><Preparation /></WithLayout>} />
+            <Route path="/profile" element={<WithLayout><Profile /></WithLayout>} />
+            <Route path="/admin" element={<WithLayout><Admin /></WithLayout>} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </BrowserRouter>
       </AppProvider>
     </TooltipProvider>
