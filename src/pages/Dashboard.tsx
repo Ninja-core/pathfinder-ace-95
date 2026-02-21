@@ -45,7 +45,7 @@ export default function Dashboard() {
     <div className="max-w-6xl mx-auto space-y-6">
       {/* Welcome */}
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
-        <h2 className="font-display text-2xl font-bold text-foreground">Welcome back, Arjun 👋</h2>
+        <h2 className="font-display text-2xl font-bold text-foreground">Welcome back, Bhawna Vig 👋</h2>
         <p className="text-muted-foreground text-sm mt-1">Here's your placement overview for today.</p>
       </motion.div>
 
