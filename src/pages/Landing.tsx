@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import heroIllustration from "@/assets/hero-illustration.png";
 import {
   GraduationCap, ArrowRight, BookOpen, Brain, Mic, Filter,
   Calculator, Bell, Award, Shield, Sparkles, Users, CheckCircle2
@@ -108,6 +109,19 @@ export default function Landing() {
             >
               See how it works
             </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="mt-12"
+          >
+            <img
+              src={heroIllustration}
+              alt="Students celebrating placement success"
+              className="w-full max-w-3xl mx-auto rounded-2xl shadow-elevated border border-border"
+            />
           </motion.div>
         </div>
       </section>
