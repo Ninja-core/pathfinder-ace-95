@@ -10,27 +10,43 @@ interface Msg {
 }
 
 const botResponses: Record<string, string> = {
-  companies: `Here are the upcoming companies visiting campus:\n\n${companies.map(c => `• **${c.name}** — ${c.role} (${c.package}), Deadline: ${c.deadline}`).join("\n")}`,
-  eligibility: "Eligibility criteria vary by company. Most product companies require CGPA ≥ 7.5 in CSE/IT, while service companies accept all branches with CGPA ≥ 6.0. Check the Opportunities page for specific details!",
-  prepare: "Great question! Here's a preparation plan:\n\n1. **Coding**: Solve 50+ LeetCode problems (Arrays, Trees, DP)\n2. **Aptitude**: Practice on GeeksforGeeks & IndiaBix\n3. **Interview**: Do mock interviews with friends\n4. **Resume**: Keep it concise, 1 page, highlight projects\n5. **System Design**: Learn basics if targeting product companies",
-  status: "You can track your application status on the **Dashboard**. Your current applications show statuses like Applied, Interview Scheduled, Selected, or Rejected. Keep checking for updates!",
-  help: "I can help you with:\n\n• 📋 **Upcoming companies** — type 'companies'\n• ✅ **Eligibility criteria** — type 'eligibility'\n• 📚 **How to prepare** — type 'prepare'\n• 📊 **Application status** — type 'status'\n\nJust ask me anything about placements!",
+  companies: `Here are the upcoming recruiters visiting campus:\n\n${companies.map(c => `• **${c.name}** — ${c.role} (${c.package}), Deadline: ${c.deadline}`).join("\n")}`,
+
+  eligibility: "Eligibility varies by recruiter type:\n\n• **Investment Banks** (Goldman Sachs, JPMorgan): MBA Finance, CGPA ≥ 3.5/4.0\n• **Consulting** (McKinsey, BCG, Deloitte): Any MBA specialisation, CGPA ≥ 3.3/4.0\n• **FMCG** (HUL, P&G, Nestlé): MBA Marketing / Finance, CGPA ≥ 3.0/4.0\n• **Banks** (HDFC, ICICI, Kotak): MBA Finance, all branches considered\n\nAlways check the Opportunities page for the latest criteria!",
+
+  prepare: "Here's your MBA placement preparation roadmap:\n\n**Finance Track 🏦**\n1. Master Financial Modelling (DCF, LBO, M&A)\n2. Practise Excel — pivot tables, VLOOKUP, Power Query\n3. Study company annual reports and sector trends\n\n**Marketing Track 📊**\n1. Learn brand management frameworks: STP, 4Ps, Porter's 5 Forces\n2. Practice guesstimate & market-sizing questions\n3. Build a digital marketing case portfolio\n\n**Common 🎯**\n1. Solve 30+ case studies (McKinsey, BCG, Bain style)\n2. Prepare 5–6 strong STAR behavioural stories\n3. Read ET, Mint, or Business Standard daily",
+
+  finance: "Key Finance topics for MBA placements:\n\n• **Valuation**: DCF, Comparable Companies, Precedent Transactions\n• **Financial Statements**: P&L, Balance Sheet, Cash Flow linkages\n• **Ratios**: ROE, ROCE, EV/EBITDA, P/E, Debt-to-Equity\n• **Products**: Bonds, Equities, Derivatives, PE/VC structures\n• **M&A**: Deal structuring, synergies, accretion/dilution analysis\n\nPractise mock interviews on Mergers & Inquisitions or WSJ!",
+
+  marketing: "Key Marketing topics for MBA placements:\n\n• **Brand Management**: STP (Segmentation, Targeting, Positioning)\n• **4Ps / 7Ps**: Product, Price, Place, Promotion\n• **Consumer Behaviour**: Buying decision process, psychographic segmentation\n• **Digital Marketing**: SEO, SEM, social media ROI, funnel analysis\n• **Market Research**: Conjoint analysis, focus groups, NPS\n• **Case types**: Go-to-market, new product launch, declining sales\n\nStudy HUL, P&G, and Unilever brand case studies!",
+
+  case: "Case Interview Preparation Tips:\n\n1. **Structure first**: Always lay out your framework before diving in\n2. **MECE thinking**: Mutually Exclusive, Collectively Exhaustive buckets\n3. **Frameworks**: Profitability, Market Entry, M&A, Pricing, Operations\n4. **Quantitative comfort**: Be quick with mental maths & market sizing\n5. **Communication**: Think out loud, be hypothesis-driven\n\n📚 Resources: Case in Point (Cosentino), Victor Cheng's LOMS, Preplounge",
+
+  resume: "MBA Resume Tips:\n\n• Lead every bullet with an **impact metric** (e.g. 'Increased revenue by 18%')\n• Keep it to **1 page** — use 10–11pt font, clean layout\n• Sections order: Education → Work Experience → Internships → Projects → Leadership → Skills\n• Highlight **cross-functional leadership** and **quantified outcomes**\n• Tailor keywords to the JD: 'P&L ownership', 'credit analysis', 'GTM strategy'\n• Avoid clichés like 'team player' or 'hard worker' — show, don't tell",
+
+  status: "You can track your application status on the **Dashboard**. Statuses include Applied, Interview Scheduled, Selected, or Rejected. Check the Opportunities page for upcoming deadlines!",
+
+  help: "Hi! I'm your MBA Placement Assistant 🎓\n\nI can help you with:\n\n• 🏢 **Upcoming companies** — type 'companies'\n• ✅ **Eligibility criteria** — type 'eligibility'\n• 📚 **How to prepare** — type 'prepare'\n• 🏦 **Finance topics** — type 'finance'\n• 📣 **Marketing topics** — type 'marketing'\n• 🧩 **Case interviews** — type 'case'\n• 📄 **Resume tips** — type 'resume'\n• 📊 **Application status** — type 'status'\n\nJust ask anything about your MBA placements!",
 };
 
 function getResponse(input: string): string {
   const lower = input.toLowerCase();
-  if (lower.includes("compan") || lower.includes("upcoming") || lower.includes("visiting")) return botResponses.companies;
-  if (lower.includes("eligib") || lower.includes("criteria") || lower.includes("cgpa")) return botResponses.eligibility;
-  if (lower.includes("prepar") || lower.includes("study") || lower.includes("practice") || lower.includes("how to")) return botResponses.prepare;
-  if (lower.includes("status") || lower.includes("application") || lower.includes("applied")) return botResponses.status;
-  if (lower.includes("help") || lower.includes("hi") || lower.includes("hello") || lower.includes("hey")) return botResponses.help;
-  return "I'm not sure about that, but I can help with upcoming companies, eligibility, preparation tips, or application status. Type **help** to see what I can do! 😊";
+  if (lower.includes("compan") || lower.includes("upcoming") || lower.includes("visiting") || lower.includes("recruiter")) return botResponses.companies;
+  if (lower.includes("eligib") || lower.includes("criteria") || lower.includes("cgpa") || lower.includes("gpa") || lower.includes("qualifying")) return botResponses.eligibility;
+  if (lower.includes("financ") || lower.includes("dcf") || lower.includes("valuat") || lower.includes("investment bank") || lower.includes("modell") || lower.includes("balance sheet") || lower.includes("ratio")) return botResponses.finance;
+  if (lower.includes("market") || lower.includes("brand") || lower.includes("fmcg") || lower.includes("4p") || lower.includes("stp") || lower.includes("consumer") || lower.includes("digital")) return botResponses.marketing;
+  if (lower.includes("case") || lower.includes("consulting") || lower.includes("framework") || lower.includes("mece") || lower.includes("guesstimate") || lower.includes("bcg") || lower.includes("mckinsey")) return botResponses.case;
+  if (lower.includes("resum") || lower.includes("cv") || lower.includes("bullet") || lower.includes("format")) return botResponses.resume;
+  if (lower.includes("prepar") || lower.includes("study") || lower.includes("practice") || lower.includes("how to") || lower.includes("roadmap") || lower.includes("tips")) return botResponses.prepare;
+  if (lower.includes("status") || lower.includes("application") || lower.includes("applied") || lower.includes("track")) return botResponses.status;
+  if (lower.includes("help") || lower.includes("hi") || lower.includes("hello") || lower.includes("hey") || lower.includes("start")) return botResponses.help;
+  return "I'm not sure about that! Try asking about **companies**, **finance**, **marketing**, **case interviews**, **resume tips**, or **eligibility**. Type **help** to see all I can do 🎓";
 }
 
 export default function Chatbot() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([
-    { role: "assistant", content: "Hi! 👋 I'm your placement assistant. Ask me about upcoming companies, eligibility, preparation tips, or your application status!" },
+    { role: "assistant", content: "Hi! 👋 I'm your **MBA Placement Assistant**. I can help with upcoming recruiters, finance & marketing prep, case interviews, resume tips, and more. Type **help** to get started!" },
   ]);
   const [input, setInput] = useState("");
   const [typing, setTyping] = useState(false);
@@ -146,7 +162,7 @@ export default function Chatbot() {
                 <input
                   value={input}
                   onChange={e => setInput(e.target.value)}
-                  placeholder="Ask about placements..."
+                  placeholder="Ask about finance, marketing, cases..."
                   className="flex-1 px-3.5 py-2.5 rounded-lg border border-input bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
                 />
                 <button type="submit" className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center hover:opacity-90 transition-opacity shrink-0">

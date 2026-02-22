@@ -29,67 +29,77 @@ export interface PrepTask {
 
 export const companies: Company[] = [
   {
-    id: "1", name: "Google", logo: "G", role: "Software Engineer", package: "₹45 LPA",
-    eligibility: "CGPA ≥ 8.0, CSE/IT", deadline: "2026-03-05", type: "Product",
-    location: "Bangalore", description: "Work on large-scale distributed systems and cutting-edge technology."
+    id: "1", name: "Goldman Sachs", logo: "GS", role: "Investment Banking Analyst", package: "₹28 LPA",
+    eligibility: "MBA Finance, CGPA ≥ 3.5/4.0", deadline: "2026-03-05", type: "Investment Bank",
+    location: "Mumbai", description: "Work on M&A deals, IPOs, and capital market transactions for Fortune 500 clients."
   },
   {
-    id: "2", name: "Microsoft", logo: "M", role: "SDE-1", package: "₹42 LPA",
-    eligibility: "CGPA ≥ 7.5, All Branches", deadline: "2026-03-10", type: "Product",
-    location: "Hyderabad", description: "Build products used by billions. Focus on cloud computing and AI."
+    id: "2", name: "McKinsey & Company", logo: "MC", role: "Business Analyst", package: "₹32 LPA",
+    eligibility: "MBA (Any Specialisation), CGPA ≥ 3.3/4.0", deadline: "2026-03-10", type: "Consulting",
+    location: "Delhi / Mumbai", description: "Drive strategic transformations for leading corporations and governments."
   },
   {
-    id: "3", name: "Amazon", logo: "A", role: "SDE Intern", package: "₹36 LPA",
-    eligibility: "CGPA ≥ 7.0, CSE/IT/ECE", deadline: "2026-03-02", type: "Product",
-    location: "Bangalore", description: "Innovate at scale across e-commerce, AWS, and Alexa."
+    id: "3", name: "Hindustan Unilever", logo: "HU", role: "Brand Manager Trainee", package: "₹24 LPA",
+    eligibility: "MBA Marketing / Finance, CGPA ≥ 3.0/4.0", deadline: "2026-03-02", type: "FMCG",
+    location: "Mumbai", description: "Lead brand strategy, consumer insights, and go-to-market plans for iconic HUL brands."
   },
   {
-    id: "4", name: "Infosys", logo: "I", role: "Systems Engineer", package: "₹6.5 LPA",
-    eligibility: "CGPA ≥ 6.0, All Branches", deadline: "2026-03-20", type: "Service",
-    location: "Pune", description: "Join a global leader in IT services and consulting."
+    id: "4", name: "HDFC Bank", logo: "HD", role: "Management Trainee – Corporate Banking", package: "₹14 LPA",
+    eligibility: "MBA Finance, CGPA ≥ 3.0/4.0", deadline: "2026-03-20", type: "Banking",
+    location: "Pan India", description: "Manage corporate client relationships, credit analysis, and treasury operations."
   },
   {
-    id: "5", name: "TCS", logo: "T", role: "Digital Lead", package: "₹9 LPA",
-    eligibility: "CGPA ≥ 7.0, CSE/IT", deadline: "2026-03-15", type: "Service",
-    location: "Mumbai", description: "Be part of digital transformation projects for Fortune 500 clients."
+    id: "5", name: "Deloitte", logo: "DL", role: "Consultant – Financial Advisory", package: "₹18 LPA",
+    eligibility: "MBA Finance / Strategy, All Specialisations", deadline: "2026-03-15", type: "Consulting",
+    location: "Bangalore / Hyderabad", description: "Deliver financial due diligence, restructuring, and risk advisory services."
   },
   {
-    id: "6", name: "Flipkart", logo: "F", role: "Frontend Engineer", package: "₹32 LPA",
-    eligibility: "CGPA ≥ 7.5, CSE/IT", deadline: "2026-03-08", type: "Product",
-    location: "Bangalore", description: "Build India's largest e-commerce platform experiences."
+    id: "6", name: "P&G India", logo: "PG", role: "Assistant Brand Manager", package: "₹22 LPA",
+    eligibility: "MBA Marketing, CGPA ≥ 3.2/4.0", deadline: "2026-03-08", type: "FMCG",
+    location: "Mumbai", description: "Own the P&L of a brand, drive digital marketing, and lead cross-functional teams."
+  },
+  {
+    id: "7", name: "Kotak Mahindra Bank", logo: "KM", role: "Associate – Wealth Management", package: "₹16 LPA",
+    eligibility: "MBA Finance, CGPA ≥ 3.0/4.0", deadline: "2026-03-12", type: "Banking",
+    location: "Mumbai / Pune", description: "Manage HNI portfolios, conduct financial planning, and grow assets under management."
+  },
+  {
+    id: "8", name: "Nestlé India", logo: "NE", role: "Area Sales Manager", package: "₹15 LPA",
+    eligibility: "MBA Marketing / Rural Management", deadline: "2026-03-18", type: "FMCG",
+    location: "Pan India", description: "Drive channel sales, distributor networks, and market penetration for Nestlé products."
   },
 ];
 
 export const initialApplications: Application[] = [
-  { id: "a1", companyId: "1", companyName: "Google", role: "Software Engineer", status: "interview", appliedDate: "2026-02-15" },
-  { id: "a2", companyId: "4", companyName: "Infosys", role: "Systems Engineer", status: "applied", appliedDate: "2026-02-18" },
-  { id: "a3", companyId: "3", companyName: "Amazon", role: "SDE Intern", status: "interested", appliedDate: "2026-02-20" },
+  { id: "a1", companyId: "1", companyName: "Goldman Sachs", role: "Investment Banking Analyst", status: "interview", appliedDate: "2026-02-15" },
+  { id: "a2", companyId: "4", companyName: "HDFC Bank", role: "Management Trainee – Corporate Banking", status: "applied", appliedDate: "2026-02-18" },
+  { id: "a3", companyId: "3", companyName: "Hindustan Unilever", role: "Brand Manager Trainee", status: "interested", appliedDate: "2026-02-20" },
 ];
 
 export const initialPrepTasks: PrepTask[] = [
-  { id: "t1", title: "Complete 50 LeetCode problems", category: "Coding", completed: true },
-  { id: "t2", title: "Practice SQL queries", category: "Coding", completed: false },
-  { id: "t3", title: "Mock interview with friend", category: "Interview", completed: false },
-  { id: "t4", title: "Review OS concepts", category: "Aptitude", completed: true },
-  { id: "t5", title: "Prepare STAR stories", category: "Interview", completed: false },
-  { id: "t6", title: "Aptitude test practice", category: "Aptitude", completed: false },
-  { id: "t7", title: "System design basics", category: "Coding", completed: false },
-  { id: "t8", title: "Update resume", category: "General", completed: true },
+  { id: "t1", title: "Practice 30 case interviews (McKinsey / BCG style)", category: "Interview", completed: true },
+  { id: "t2", title: "Revise Financial Modelling & DCF Valuation", category: "Finance", completed: false },
+  { id: "t3", title: "Prepare STAR stories for HR rounds", category: "Interview", completed: false },
+  { id: "t4", title: "Learn Excel: VLOOKUP, Pivot Tables, Power Query", category: "Finance", completed: true },
+  { id: "t5", title: "Study brand management frameworks (STP, 4Ps)", category: "Marketing", completed: false },
+  { id: "t6", title: "Solve quantitative aptitude mock tests", category: "Aptitude", completed: false },
+  { id: "t7", title: "Read Economic Times & Business Standard daily", category: "General", completed: true },
+  { id: "t8", title: "Update resume — highlight internship impact metrics", category: "General", completed: true },
 ];
 
 export const studentProfile = {
   name: "Bhawna Vig",
-  email: "bhawna.vig@college.edu",
-  branch: "Computer Science & Engineering",
-  year: "Final Year",
-  cgpa: "8.4",
+  email: "bhawna.vig@mba.edu",
+  branch: "MBA – Finance & Marketing",
+  year: "2nd Year",
+  cgpa: "8.3/10",
   phone: "+91 98765 43210",
-  skills: ["React", "Python", "Java", "SQL", "Machine Learning", "Node.js"],
+  skills: ["Financial Modelling", "Excel", "Brand Management", "Case Analysis", "Market Research", "Power BI"],
   resumeUploaded: true,
 };
 
 export const announcements = [
-  { id: "n1", title: "Google pre-placement talk tomorrow at 3 PM", time: "2 hours ago", urgent: true },
-  { id: "n2", title: "Resume submission deadline extended for TCS", time: "5 hours ago", urgent: false },
-  { id: "n3", title: "Mock interview slots open — sign up now", time: "1 day ago", urgent: false },
+  { id: "n1", title: "Goldman Sachs PPO talk tomorrow at 3 PM — attendance mandatory", time: "2 hours ago", urgent: true },
+  { id: "n2", title: "HUL resume submission deadline extended by 3 days", time: "5 hours ago", urgent: false },
+  { id: "n3", title: "Mock case interview slots open — register by midnight", time: "1 day ago", urgent: false },
 ];
