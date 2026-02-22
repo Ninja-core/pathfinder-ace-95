@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { LayoutDashboard, Building2, BookOpen, User, Shield, Bell, GraduationCap, FileSearch, Sparkles } from "lucide-react";
+import { LayoutDashboard, Building2, BookOpen, User, Shield, Bell, GraduationCap, FileSearch, Sparkles, Target, Award } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { announcements } from "@/lib/mockData";
@@ -10,6 +10,8 @@ const navItems = [
   { to: "/preparation", icon: BookOpen, label: "Preparation" },
   { to: "/resume-analyzer", icon: FileSearch, label: "Resume Analyzer" },
   { to: "/career-predictor", icon: Sparkles, label: "Career Predictor" },
+  { to: "/skill-gap", icon: Target, label: "Skill Gap Detector" },
+  { to: "/readiness", icon: Award, label: "Readiness Score" },
   { to: "/profile", icon: User, label: "Profile" },
   { to: "/admin", icon: Shield, label: "Admin" },
 ];
