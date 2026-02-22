@@ -77,14 +77,30 @@ export const initialApplications: Application[] = [
 ];
 
 export const initialPrepTasks: PrepTask[] = [
-  { id: "t1", title: "Practice 30 case interviews (McKinsey / BCG style)", category: "Interview", completed: true },
-  { id: "t2", title: "Revise Financial Modelling & DCF Valuation", category: "Finance", completed: false },
-  { id: "t3", title: "Prepare STAR stories for HR rounds", category: "Interview", completed: false },
-  { id: "t4", title: "Learn Excel: VLOOKUP, Pivot Tables, Power Query", category: "Finance", completed: true },
-  { id: "t5", title: "Study brand management frameworks (STP, 4Ps)", category: "Marketing", completed: false },
-  { id: "t6", title: "Solve quantitative aptitude mock tests", category: "Aptitude", completed: false },
-  { id: "t7", title: "Read Economic Times & Business Standard daily", category: "General", completed: true },
-  { id: "t8", title: "Update resume — highlight internship impact metrics", category: "General", completed: true },
+  // Finance
+  { id: "t1", title: "Build a 3-statement financial model in Excel (Income → Balance Sheet → Cash Flow)", category: "Finance", completed: true },
+  { id: "t2", title: "Complete a DCF valuation for a listed mid-cap company", category: "Finance", completed: false },
+  { id: "t3", title: "Solve 10 financial ratio analysis questions (ROE, ROCE, EV/EBITDA)", category: "Finance", completed: false },
+  { id: "t4", title: "Read one company's Annual Report end-to-end and write a 1-page brief", category: "Finance", completed: false },
+  // Marketing
+  { id: "t5", title: "Design a Brand Plan: Audit → STP → 4Ps → KPIs for any FMCG brand", category: "Marketing", completed: true },
+  { id: "t6", title: "Solve 5 FMCG case studies (declining sales, new product launch, pricing)", category: "Marketing", completed: false },
+  { id: "t7", title: "Study HUL & P&G Annual Reports — understand brand-wise revenue contribution", category: "Marketing", completed: false },
+  { id: "t8", title: "Learn consumer segmentation models: Psychographic, Behavioural, Demographic", category: "Marketing", completed: false },
+  // Consulting
+  { id: "t9", title: "Practice 20 consulting cases using MECE frameworks (McKinsey / BCG style)", category: "Consulting", completed: true },
+  { id: "t10", title: "Complete Preplounge Beginner Case Level and get feedback", category: "Consulting", completed: false },
+  { id: "t11", title: "Prepare 6 STAR behavioural stories for leadership & impact questions", category: "Consulting", completed: false },
+  // Entrepreneurship
+  { id: "t12", title: "Develop a Business Model Canvas (BMC) for a startup idea", category: "Entrepreneurship", completed: false },
+  { id: "t13", title: "Conduct 10 customer discovery interviews and write key insights", category: "Entrepreneurship", completed: false },
+  // Digital Marketing
+  { id: "t14", title: "Earn Google Analytics 4 (GA4) Certification from Skillshop", category: "Digital Marketing", completed: false },
+  { id: "t15", title: "Run a real Meta Ads or Google Ads campaign with even a ₹500 budget", category: "Digital Marketing", completed: false },
+  // General
+  { id: "t16", title: "Read Economic Times or Mint for 15 minutes daily — track for 30 days", category: "General", completed: true },
+  { id: "t17", title: "Update resume — quantify every bullet with an impact metric", category: "General", completed: true },
+  { id: "t18", title: "Attend 2 alumni interaction sessions and follow up with LinkedIn notes", category: "General", completed: false },
 ];
 
 export const studentProfile = {
