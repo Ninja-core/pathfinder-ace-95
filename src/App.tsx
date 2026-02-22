@@ -10,6 +10,7 @@ import Landing from "@/pages/Landing";
 import Dashboard from "@/pages/Dashboard";
 import Opportunities from "@/pages/Opportunities";
 import Preparation from "@/pages/Preparation";
+import ResumeAnalyzer from "@/pages/ResumeAnalyzer";
 import Profile from "@/pages/Profile";
 import Admin from "@/pages/Admin";
 import NotFound from "./pages/NotFound";
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/dashboard" element={<WithLayout><Dashboard /></WithLayout>} />
             <Route path="/opportunities" element={<WithLayout><Opportunities /></WithLayout>} />
             <Route path="/preparation" element={<WithLayout><Preparation /></WithLayout>} />
+            <Route path="/resume-analyzer" element={<WithLayout><ResumeAnalyzer /></WithLayout>} />
             <Route path="/profile" element={<WithLayout><Profile /></WithLayout>} />
             <Route path="/admin" element={<WithLayout><Admin /></WithLayout>} />
             <Route path="*" element={<NotFound />} />

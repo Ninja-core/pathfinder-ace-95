@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { LayoutDashboard, Building2, BookOpen, User, Shield, Bell, GraduationCap } from "lucide-react";
+import { LayoutDashboard, Building2, BookOpen, User, Shield, Bell, GraduationCap, FileSearch } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { announcements } from "@/lib/mockData";
@@ -8,6 +8,7 @@ const navItems = [
   { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
   { to: "/opportunities", icon: Building2, label: "Opportunities" },
   { to: "/preparation", icon: BookOpen, label: "Preparation" },
+  { to: "/resume-analyzer", icon: FileSearch, label: "Resume Analyzer" },
   { to: "/profile", icon: User, label: "Profile" },
   { to: "/admin", icon: Shield, label: "Admin" },
 ];
@@ -50,7 +51,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-full gradient-primary flex items-center justify-center text-xs font-bold text-primary-foreground">AS</div>
             <div className="text-xs">
-              <div className="font-medium text-sidebar-accent-foreground">Arjun Sharma</div>
+              <div className="font-medium text-sidebar-accent-foreground">Bhawna Vig</div>
               <div className="text-sidebar-foreground/60">CSE • Final Year</div>
             </div>
           </div>
