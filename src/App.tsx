@@ -14,6 +14,7 @@ import ResumeAnalyzer from "@/pages/ResumeAnalyzer";
 import CareerPredictor from "@/pages/CareerPredictor";
 import SkillGapDetector from "@/pages/SkillGapDetector";
 import PlacementReadiness from "@/pages/PlacementReadiness";
+import OfferComparison from "@/pages/OfferComparison";
 import Profile from "@/pages/Profile";
 import Admin from "@/pages/Admin";
 import NotFound from "./pages/NotFound";
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/career-predictor" element={<WithLayout><CareerPredictor /></WithLayout>} />
             <Route path="/skill-gap" element={<WithLayout><SkillGapDetector /></WithLayout>} />
             <Route path="/readiness" element={<WithLayout><PlacementReadiness /></WithLayout>} />
+            <Route path="/offers" element={<WithLayout><OfferComparison /></WithLayout>} />
             <Route path="/profile" element={<WithLayout><Profile /></WithLayout>} />
             <Route path="/admin" element={<WithLayout><Admin /></WithLayout>} />
             <Route path="*" element={<NotFound />} />
